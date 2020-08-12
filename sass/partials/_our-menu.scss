@@ -1,0 +1,162 @@
+#our-menu {
+  margin-bottom: 75px;
+  font-family: $font-family-primary;
+
+  h3 {
+    @include h3;
+    padding-bottom: 15px;
+    margin-bottom: 81px;
+  }
+
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+
+    @media (max-width: 581px) {
+      flex-flow: column nowrap;
+    }
+
+    li {
+      display: block;
+      margin: 0 30px 30px 0;
+      flex-basis: 260px;
+      flex-grow: 1;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+
+        @media (min-width: 582px) and (max-width: 869px) {
+          margin-right: 30px;
+        }
+      }
+
+      @media (max-width: 869px) {
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+
+      @media (max-width: 581px) {
+        margin-right: 0;
+        flex-basis: auto;
+      }
+
+      .card {
+        display: block;
+        position: relative;
+        max-width: 350px;
+        margin: 0 auto;
+
+        .img-box {
+          display: block;
+          overflow: hidden;
+          max-height: 250px;
+          max-width: 350px;
+
+          img {
+            display: block;
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        &:hover {
+          .popup {
+            opacity: 1;
+            transition: all .5s ease;
+          }
+        }
+
+        .popup {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: $rgba-blue;
+          opacity: 0;
+          transition: all .75s ease;
+
+          .tile {
+            display: flex;
+            overflow: hidden;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 12px;
+            left: 18px;
+            right: 16px;
+            bottom: 14px;
+            text-align: center;
+            background-color: $rgba-pink;
+            border: 1px solid $color-white;
+
+            h4 {
+              display: block;
+              margin-bottom: 23px;
+              font-size: 28px;
+              font-weight: 400;
+              color: $color-white;
+            }
+
+            ul {
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: center;
+
+              li {
+                width: auto;
+                padding: 0 15px;
+                margin-bottom: 0;
+
+                &:nth-child(3n), &:nth-child(2n) {
+                  margin-right: 0;
+                }
+
+                a {
+                  display: block;
+                  height: 60px;
+                  width: 60px;
+                  padding: 15px;
+                  color: $color-white;
+                  border: 2px solid $color-white;
+
+                  &:hover {
+                    color: $color-pink;
+                    background-color: $color-white;
+                  }
+
+                  svg {
+                    height: 26px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1161px) {
+    .container.wide {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  #our-menu {
+
+    h3.holder {
+      padding-left: 14px;
+    }
+
+    .tile.holder {
+      padding-top: 38px;
+    }
+  }
+}

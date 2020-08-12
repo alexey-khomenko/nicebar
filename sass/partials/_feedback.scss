@@ -1,0 +1,110 @@
+#feedback {
+  margin-bottom: 29px;
+
+  form {
+    display: block;
+
+    fieldset {
+      display: block;
+
+      ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin-bottom: 16px;
+
+        li {
+          display: block;
+
+          @media (max-width: 781px) {
+            width: 100%;
+          }
+
+          @media (min-width: 782px) {
+            width: 352px;
+          }
+
+          input,
+          textarea {
+            display: block;
+            width: 100%;
+            padding: 0 14px;
+            margin: 0 0 13px;
+            font-family: $font-family-secondary;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 32px;
+            color: #000;
+            background-color: $color-white;
+            border: 1px solid #878787;
+
+            &::-webkit-input-placeholder, &:focus::-webkit-input-placeholder, &::placeholder {
+              color: #000;
+              opacity: 1;
+            }
+          }
+
+          input {
+            height: 32px;
+          }
+
+          textarea {
+            height: 122px;
+            resize: none;
+          }
+        }
+      }
+
+      button {
+        display: block;
+        overflow: hidden;
+        width: 114px;
+        padding: 0;
+        margin: 0 auto;
+        color: $color-white;
+        background-color: $color-pink;
+        border: 1px solid $color-pink;
+
+        &:hover {
+          color: $color-pink;
+          background-color: $color-white;
+          cursor: pointer;
+        }
+
+        svg {
+          float: left;
+          height: 18px;
+          margin: 8px 8px 9px 4px;
+        }
+
+        span {
+          float: left;
+          font-family: $font-family-primary;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+
+  .container.narrow {
+    @media (max-width: 1161px) {
+      width: 762px;
+    }
+
+    @media (max-width: 781px) {
+      width: 366px;
+    }
+
+    @media (max-width: 375px) {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  #feedback textarea.holder {
+    padding: 4px 15px;
+  }
+}

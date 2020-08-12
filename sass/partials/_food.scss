@@ -1,0 +1,154 @@
+#food {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 92px;
+  font-family: $font-family-primary;
+
+  img {
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    height: 747px;
+    width: 883px;
+    margin-left: -83px;
+    z-index: 0;
+
+    @media (max-width: 1161px) {
+      display: none;
+    }
+  }
+
+  h3 {
+    @include h3;
+    padding-bottom: 14px;
+    margin-bottom: 28px;
+  }
+
+  .subtitle {
+    display: block;
+    max-width: 500px;
+    margin: 0 auto 58px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: $color-text;
+  }
+
+  ul {
+    display: block;
+
+    @media (min-width: 782px) and (max-width: 1161px) {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+
+    li {
+      display: flex;
+
+      @media (min-width: 1162px) {
+        height: 220px;
+
+        &:nth-child(1) {
+          width: 530px;
+          margin-left: 122px;
+        }
+
+        &:nth-child(2) {
+          width: 580px;
+          margin-left: 0;
+        }
+
+        &:nth-child(3) {
+          width: 510px;
+          margin-left: 124px;
+        }
+
+        &:nth-child(4) {
+          width: 530px;
+          margin-left: 242px;
+        }
+
+        &:last-child {
+          height: auto;
+        }
+      }
+
+      @media (min-width: 782px) and (max-width: 1161px) {
+        flex: 1 1 50%;
+        padding: 0 15px;
+      }
+
+      @media (max-width: 479px), (min-width: 782px) and (max-width: 1161px) {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      @media (max-width: 1161px) {
+        margin-bottom: 50px;
+      }
+
+      @media (max-width: 781px) {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .circle {
+        display: block;
+        width: 80px;
+        height: 80px;
+        padding-left: 6px;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 76px;
+        color: $color-white;
+        background-color: $color-pink;
+        border-radius: 50%;
+        margin-right: 15px;
+        text-align: center;
+
+        @media (max-width: 479px), (min-width: 782px) and (max-width: 1161px) {
+          margin: 0 auto 20px;
+        }
+      }
+
+      .text {
+        display: block;
+        flex: 1;
+        font-size: 18px;
+
+        h4 {
+          display: block;
+          margin-bottom: 12px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+
+        p {
+          display: block;
+          font-weight: 400;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  #food {
+
+    h3.holder {
+      padding-left: 20px;
+    }
+
+    .text.holder {
+      margin-top: -2px;
+    }
+  }
+}

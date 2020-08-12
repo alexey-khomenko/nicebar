@@ -1,0 +1,181 @@
+#slider {
+  position: relative;
+  margin-bottom: 85px;
+
+  .bx-wrapper {
+    display: block;
+    border: none;
+    box-shadow: none;
+
+    .bx-viewport .slider div img {
+      margin: 0 auto;
+      height: 650px;
+      width: 100%;
+    }
+
+    .bx-viewport .slider div .text {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 168px;
+      right: 168px;
+      bottom: 40px;
+      z-index: 10;
+      font-family: $font-family-primary;
+      text-transform: uppercase;
+      text-align: center;
+
+      @media (max-width: 811px) {
+        left: 60px;
+        right: 60px;
+      }
+
+      @media (max-width: 375px) {
+        left: 15px;
+        right: 15px;
+      }
+
+      p {
+        display: block;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 44px;
+        letter-spacing: 5px;
+        color: #a4a4a4;
+
+        @media (max-width: 1161px) {
+          line-height: 30px;
+          margin-bottom: 20px;
+        }
+      }
+
+      h1, h2 {
+        display: block;
+        max-width: 800px;
+        margin: 0 auto 82px;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 60px;
+        color: $color-white;
+
+        @media (max-width: 1161px) {
+          font-size: 30px;
+          line-height: 42px;
+          margin-bottom: 40px;
+        }
+      }
+
+      a {
+        display: block;
+        width: 150px;
+        margin: 0 auto;
+        font-family: $font-family-secondary;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 48px;
+        color: $color-white;
+        background-color: $color-pink;
+        border: 1px solid $color-pink;
+
+        &:hover {
+          color: $color-pink;
+          background-color: $color-white;
+        }
+      }
+    }
+
+    .bx-controls.bx-has-controls-direction .bx-controls-direction a.bx-prev,
+    .bx-controls.bx-has-controls-direction .bx-controls-direction a.bx-next {
+      margin-top: -38px;
+      width: 48px;
+      height: 76px;
+      background-position: center;
+
+      @media (max-width: 899px) {
+        width: 32px;
+        background-size: contain;
+      }
+
+      @media (max-width: 375px) {
+        display: none;
+      }
+    }
+
+    .bx-controls.bx-has-controls-direction .bx-controls-direction a.bx-prev {
+      background-image: url(../images/slider__prev.png);
+      left: 60px;
+
+      @media (max-width: 899px) {
+        left: 15px;
+      }
+    }
+
+    .bx-controls.bx-has-controls-direction .bx-controls-direction a.bx-next {
+      background-image: url(../images/slider__next.png);
+      right: 60px;
+
+      @media (max-width: 899px) {
+        right: 15px;
+      }
+    }
+
+    .bx-controls.bx-has-controls-direction.bx-has-pager .bx-pager.bx-default-pager {
+      position: absolute;
+      left: 168px;
+      right: 168px;
+      bottom: 30px;
+      width: auto;
+
+      @media (max-width: 899px) {
+        left: 60px;
+        right: 60px;
+        bottom: 15px;
+      }
+
+      .bx-pager-item {
+
+        &:last-child {
+
+          a.bx-pager-link {
+            margin-right: 0;
+          }
+        }
+
+        a.bx-pager-link {
+          margin-right: 5px;
+          margin-left: 0;
+          height: 16px;
+          width: 16px;
+          background-color: $color-pink;
+          border-radius: 0;
+          opacity: .3;
+
+          &.active, &:hover {
+            opacity: 1;
+          }
+
+          &.active {
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  #slider .bx-viewport .slider div .text.holder {
+    top: 18px;
+
+    p.holder {
+      padding-left: 16px;
+    }
+
+    h1.holder {
+      padding-left: 8px;
+    }
+  }
+}

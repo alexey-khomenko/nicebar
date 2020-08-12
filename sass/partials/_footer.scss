@@ -1,0 +1,94 @@
+#footer {
+  background-color: #1b1b1b;
+
+  .top {
+    display: block;
+    position: relative;
+    padding: 19px 0;
+    border-bottom: 4px solid #1f1e1e;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      bottom: 50%;
+      background-color: $color-white;
+    }
+
+    a {
+      display: block;
+      position: relative;
+      z-index: 10;
+      width: 62px;
+      height: 62px;
+      margin: 0 auto;
+      text-align: center;
+      color: $color-white;
+      background-color: $color-pink;
+      border: 1px solid $color-white;
+      border-radius: 3px;
+
+      &:hover {
+        color: $color-pink;
+        background-color: $color-white;
+        border: 1px solid $color-pink;
+      }
+
+      svg {
+        height: 60px;
+      }
+    }
+  }
+
+  .bottom {
+    display: block;
+    position: relative;
+    padding: 30px 10px 26px;
+    font-family: $font-family-secondary;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white;
+
+    p {
+      display: block;
+
+      @media (max-width: 767px) {
+        margin-bottom: 15px;
+      }
+    }
+
+    a {
+      display: block;
+      position: absolute;
+      top: 30px;
+      right: 63px;
+      color: $color-white;
+
+      @media (max-width: 1279px) {
+        right: 15px;
+      }
+
+      @media (max-width: 767px) {
+        display: inline;
+        position: static;
+      }
+
+      &:hover {
+        color: $color-pink;
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  #footer p.holder {
+    padding-left: 38px;
+  }
+}
